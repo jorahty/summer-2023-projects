@@ -1,0 +1,21 @@
+* {
+  color-scheme: dark !important;
+  font-family: system-ui;
+}
+
+th,
+td {
+  padding: 10px;
+}
+
+button {
+  background: #08f;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+img {
+  border-radius: 8px;
+}

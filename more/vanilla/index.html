@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vanilla</title>
+    <script src="https://unpkg.com/@supabase/supabase-js"></script>
+  </head>
+  <body>
+    <h1>Vanilla</h1>
+    <button id="SignIn">Sign in</button>
+    <script>
+      const { createClient } = supabase;
+
+      const supa = createClient(
+        'https://qxnwxuqhslvsjabbzwgu.supabase.co',
+        'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InF4bnd4dXFoc2x2c2phYmJ6d2d1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTEyMDkwMDcsImV4cCI6MjAwNjc4NTAwN30.gm49DnOEmr0fhDhjdsSDUq_o3ZBEdhIvPUAAtvZhIOo',
+        {
+          auth: {
+            storage: ExpoSecureStoreAdapter,
+            autoRefreshToken: true,
+            persistSession: true,
+            detectSessionInUrl: false,
+          },
+        }
+      );
+
+      SignIn.onclick = async () => {
+        const result = await supa.auth.signInWithOAuth({
+          provider: 'google',
+          // options: {
+          //   redirectTo: 'spiro://google-auth',
+          // },
+        });
+
+        console.log(result);
+      };
+    </script>
+  </body>
+</html>

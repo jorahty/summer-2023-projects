@@ -1,0 +1,45 @@
+name: flutterplasma
+description: Flutter app demonstrating some examples of graphics rendering.
+
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.1.0
+
+environment:
+  sdk: '>=2.12.0 <3.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  supercharged: ^2.0.0
+  simple_animations: ^3.0.3
+  pedantic: ^1.11.0
+  url_strategy: ^0.2.0
+  url_launcher: ^6.0.3
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  integration_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/music.mp3
+  fonts:
+    - family: Work Sans
+      fonts:
+        - asset: fonts/WorkSans-ExtraLight.ttf
+          weight: 200
+        - asset: fonts/WorkSans-ExtraLightItalic.ttf
+          weight: 200
+          style: italic
+        - asset: fonts/WorkSans-Regular.ttf
+        - asset: fonts/WorkSans-Italic.ttf
+          style: italic
+        - asset: fonts/WorkSans-SemiBold.ttf
+          weight: 600
+        - asset: fonts/WorkSans-SemiBoldItalic.ttf
+          weight: 600
+          style: italic

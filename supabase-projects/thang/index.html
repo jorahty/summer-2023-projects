@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thang</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/@supabase/supabase-js"></script>
+    <script type="module">
+      import { faker } from 'https://cdn.skypack.dev/@faker-js/faker';
+      window.faker = faker;
+    </script>
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <h1>Thang</h1>
+
+    <section id="whenSignedOut">
+      <button id="signInBtn">Sign in with Google</button>
+    </section>
+
+    <section id="whenSignedIn" hidden>
+      <div id="userDetails"></div>
+      <button id="signOutBtn">Sign Out</button>
+    </section>
+
+    <section id="myThings" hidden>
+      <h2>My Things</h2>
+      <div id="myThingsList"></div>
+
+      <button id="createThing">Create a thing</button>
+    </section>
+
+    <section id="allThings">
+      <h2>All things</h2>
+      <div id="allThingsList"></div>
+    </section>
+  </body>
+</html>
